@@ -1,7 +1,9 @@
 /**
- *display data management platform
+ * @param req
+ * @param res
+ * @param next
  */
 
 module.exports = (req, res, next) => {
-   res.end('hello, world')
+   res.render('dataplatform/homepage')
 }
