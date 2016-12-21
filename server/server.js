@@ -10,6 +10,14 @@ var debug = require('debug')('galaxydatamanager:server');
 
 var app = express();
 /**
+ * load configuration
+ */
+var config = require('./utils/config')(path.join(__dirname,'/config/config.json'));
+/**
+ * connect the database
+ */
+require('./utils/dbconnector')(config.dbconf.server_name, config.dbconf.port, config.dbconf.username);
+/**
  * load route
  */
 var load_routes = require('./routes/index');
