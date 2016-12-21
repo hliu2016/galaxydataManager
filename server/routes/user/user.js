@@ -1,6 +1,7 @@
 /**
- *
+ *display data management platform
  */
-module.exports = function (req, res, next) {
+
+module.exports = (req, res, next) => {
    res.end('hello, world');
 }

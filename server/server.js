@@ -1,102 +1,103 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var http = require('http');
-var debug = require('debug')('galaxydatamanager:server');
+import 'babel-polyfill'
+import express from 'express'
+import path from 'path'
+//import favicon from 'serve-favicon'
+import logger from 'morgan'
+import cookieParser from 'cookie-parser'
+import bodyParser from 'body-parser'
+import http from 'http'
+let debug = require('debug')('galaxydatamanager:server')
 
 
-var app = express();
+let app = express()
 /**
  * load configuration
  */
-var config = require('./utils/config')(path.join(__dirname,'/config/config.json'));
+let config = require('./utils/config')(path.join(__dirname,'/config/config.json'))
 /**
  * connect the database
  */
-require('./utils/dbconnector')(config.dbconf.server_name, config.dbconf.port, config.dbconf.username);
+require('./utils/dbconnector')(config.dbconf.server_name, config.dbconf.port, config.dbconf.username)
 /**
  * load route
  */
-var load_routes = require('./routes/index');
+let load_routes = require('./routes/index')
 
 /**
  * view engine setup
  */
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
 
 /**
  * uncomment after placing your favicon in /public
  */
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(logger('dev'))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(cookieParser())
+app.use(express.static(path.join(__dirname, 'public')))
 /**
  * route partition
  */
-app.use(load_routes);
+app.use(load_routes)
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
+app.use((req, res, next) => {
+  let err = new Error('Not Found')
+  err.status = 404
+  next(err)
+})
 
 /**
  * error handler
  */
-app.use(function(err, req, res, next) {
+app.use((err, req, res, next) => {
   // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.message = err.message
+  res.locals.error = req.app.get('env') === 'development' ? err : {}
 
   // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+  res.status(err.status || 500)
+  res.render('error')
 });
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+var port = normalizePort(process.env.PORT || '3000')
+app.set('port', port)
 
 /**
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+let server = http.createServer(app)
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+server.listen(port)
+server.on('error', onError)
+server.on('listening', onListening)
 
 /**
  * Normalize a port into a number, string, or false.
  */
 
 function normalizePort(val) {
-  var port = parseInt(val, 10);
+  let port = parseInt(val, 10)
 
   if (isNaN(port)) {
     // named pipe
-    return val;
+    return val
   }
 
   if (port >= 0) {
     // port number
-    return port;
+    return port
   }
 
-  return false;
+  return false
 }
 
 /**
@@ -105,25 +106,25 @@ function normalizePort(val) {
 
 function onError(error) {
   if (error.syscall !== 'listen') {
-    throw error;
+    throw error
   }
 
   var bind = typeof port === 'string'
       ? 'Pipe ' + port
-      : 'Port ' + port;
+      : 'Port ' + port
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
       console.error(bind + ' requires elevated privileges');
-      process.exit(1);
-      break;
+      process.exit(1)
+      break
     case 'EADDRINUSE':
       console.error(bind + ' is already in use');
-      process.exit(1);
-      break;
+      process.exit(1)
+      break
     default:
-      throw error;
+      throw error
   }
 }
 
@@ -132,9 +133,9 @@ function onError(error) {
  */
 
 function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
+  let addr = server.address()
+  let bind = typeof addr === 'string'
       ? 'pipe ' + addr
-      : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+      : 'port ' + addr.port
+  debug('Listening on ' + bind)
 }

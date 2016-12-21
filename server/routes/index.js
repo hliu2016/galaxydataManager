@@ -1,8 +1,9 @@
-var router = require('express').Router();
+import { Router } from 'express'
+let router = Router()
 
 router.get('/user', require('./user/user'));
 router.get('/login', require('./login/login'));
-router.get('/', function(req, res, next){
+router.get('/', (req, res, next) => {
     res.redirect('/login');
 });
 
