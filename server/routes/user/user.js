@@ -3,5 +3,5 @@
  */
 
 module.exports = (req, res, next) => {
-   res.end('hello, world');
+   res.end('hello, world')
 }
