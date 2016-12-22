@@ -17,7 +17,7 @@ let config = require('./utils/config')(path.join(__dirname,'/config/config.json'
 /**
  * connect the database
  */
-require('./utils/dbconnector')(config.dbconf.server_name, config.dbconf.port, config.dbconf.username)
+//require('./utils/dbconnector')(config.dbconf.username, config.dbconf.password, config.dbconf.db_address, config.dbconf.db_port, config.dbconf.dbname)
 /**
  * load route
  */
