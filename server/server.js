@@ -6,6 +6,7 @@ import logger from 'morgan'
 import cookieParser from 'cookie-parser'
 import bodyParser from 'body-parser'
 import http from 'http'
+import session from 'express-session'
 let debug = require('debug')('galaxydatamanager:server')
 
 
@@ -13,11 +14,11 @@ let app = express()
 /**
  * load configuration
  */
-let config = require('./utils/config')(path.join(__dirname,'/config/config.json'))
+// let config = require('./utils/config')(path.join(__dirname,'/config/config.json'))
 /**
  * connect the database
  */
-//require('./utils/dbconnector')(config.dbconf.username, config.dbconf.password, config.dbconf.db_address, config.dbconf.db_port, config.dbconf.dbname)
+// require('./utils/dbconnector')(config.dbconf.username, config.dbconf.password, config.dbconf.db_address, config.dbconf.db_port, config.dbconf.dbname)
 /**
  * load route
  */
@@ -37,6 +38,10 @@ app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
+app.use(session({
+  secret: 'recommand 128 bytes random string', // 建议使用 128 个字符的随机字符串
+  cookie: { maxAge: 60 * 1000 }
+}))
 app.use(express.static(path.join(__dirname, 'public')))
 /**
  * route partition

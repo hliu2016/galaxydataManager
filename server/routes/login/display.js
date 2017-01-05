@@ -4,6 +4,9 @@
  * @param next
  */
 module.exports = (req, res, next) => {
-
-    res.render('login/login')
+    if(req.session.username){
+        return res.redirect('/user')
+    }else {
+        return res.render('login/login')
+    }
 }

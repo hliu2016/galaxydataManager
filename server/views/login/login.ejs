@@ -11,13 +11,14 @@
 <div class="container-fluid">
     <form class="form-signin" role="form" onsubmit="return false;">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="email" class="form-control" placeholder="Email address" id="email" required autofocus>
-        <input type="password" class="form-control" placeholder="Password" id="password">
+        <input type="email" class="form-control" placeholder="Email address" name="email" id="email" required autofocus>
+        <input type="password" class="form-control" placeholder="Password" name="password" id="password" />
         <div class="checkbox">
             <label>
                 <input type="checkbox" value="remember-me"> Remember me
             </label>
         </div>
+        <div class=""><p><a href="/signup">还没有注册？</a></p></div>
         <button class="btn btn-lg btn-primary btn-block" type="submit" id="login_button">Sign in</button>
     </form>
 </div>
@@ -37,7 +38,7 @@
                 if(data) {
                     window.location.href = data.url;
                 }else{
-
+                    alert(data);
                 }
             });
         })

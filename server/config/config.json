@@ -1,9 +1,9 @@
 {
  "dbconf":{
-   "username": "",
-   "password": "",
-   "db_address": "",
-   "port": "5432",
-   "dbname": ""
+   "username": "postgres",
+   "password": "zhujiahao",
+   "db_address": "115.159.38.41",
+   "db_port": "5432",
+   "dbname": "WitSeq"
    }
 }

@@ -11,14 +11,15 @@
 <div class="container-fluid">
     <form class="form-signin" role="form" onsubmit="return false;">
         <h2 class="form-signin-heading">Please sign up</h2>
-        <input type="email" class="form-control" placeholder="Email address" id="email" required autofocus>
+        <input type="email" class="form-control" placeholder="Email" id="email" required autofocus>
         <input type="password" class="form-control" placeholder="Password" id="password">
-        <input type="password" class="form-control" placeholder="rePassword" id="repassword">
+        <input type="password" class="form-control" placeholder="rePassword" id="confirm_password">
         <div class="checkbox">
             <label>
                 <input type="checkbox" value="remember-me"> Remember me
             </label>
         </div>
+        <div class=""><a href="/signup">已经有账号？</a></div>
         <button class="btn btn-lg btn-primary btn-block" type="submit" id="login_button">Sign in</button>
     </form>
 </div>
@@ -30,15 +31,17 @@
 <script type="text/javascript">
     $(function () {
         $("#login_button").on('click',function (e) {
-            var url = '/login';
+            var url = '/signup';
             var email = $('#email').val();
             var password = $("#password").val();
-            var data = {email: email, password: password};
+            var confirm_password = $("#confirm_password").val();
+            var data = {email: email, password: password, confirm_password: confirm_password};
             $.post(url, data, function (data) {
-                if(data) {
-                    window.location.href = data.url;
-                }else{
-
+                if(data.msg =="success") {
+                    alert("注册成功！");
+                    setTimeout(function () {
+                        window.location.href = "/login";
+                    },2000);
                 }
             });
         })
