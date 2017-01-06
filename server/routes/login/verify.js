@@ -5,6 +5,7 @@
  */
 import Joi from 'joi'
 import Promise from 'bluebird'
+import * as model from '../../model/signup/signup'
 
 module.exports = async (req, res, next) => {
     try {
@@ -32,6 +33,5 @@ module.exports = async (req, res, next) => {
         }
     } catch (e){
         console.log(e||e.stack)
-        next(e)
     }
 }

@@ -11,5 +11,7 @@ module.exports = async (req, res, next) => {
       return res.render('dataplatform/homepage')
    }else{
       console.log("error")
+      return res.send("please log in first")
+
    }
 }
