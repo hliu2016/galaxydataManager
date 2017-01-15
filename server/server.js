@@ -39,8 +39,12 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(session({
+  resave: false,
+  saveUninitialized: true,
   secret: 'recommand 128 bytes random string', // 建议使用 128 个字符的随机字符串
-  cookie: { maxAge: 60 * 1000 }
+  cookie: {
+    maxAge: 60 * 1000 * 24
+  }
 }))
 app.use(express.static(path.join(__dirname, 'public')))
 /**
