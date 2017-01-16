@@ -36,9 +36,9 @@
                     <li class="active"><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'organization')"><i class="fa fa-circle-o"></i> 组织/单位</a></li>
                     <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'user')"><i class="fa fa-circle-o"></i> 用户</a></li>
                     <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'role')"><i class="fa fa-circle-o"></i> 角色</a></li>
-                    <li><a class="tablink" href="javascript:void(0)" onClick=""><i class="fa fa-circle-o"></i> 权限</a></li>
-                    <li><a href="javascript:void(0)" onClick=""><i class="fa fa-circle-o"></i>磁盘配额</a></li>
-                    <li><a href="javascript:void(0)" onClick=""><i class="fa fa-circle-o"></i>共享</a></li>
+                    <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'permissions')"><i class="fa fa-circle-o"></i> 权限</a></li>
+                    <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'disk')"><i class="fa fa-circle-o"></i>磁盘配额</a></li>
+                    <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'sharing')"><i class="fa fa-circle-o"></i>共享</a></li>
                 </ul>
             </li>
             <li class="treeview">
@@ -50,14 +50,14 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i>生化实验</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i>样本</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i>组织器官</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i>病症类型</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i>测序技术</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i>物种</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i>数据文件</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i>文件格式</a></li>
+                    <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'bioexperiments')"><i class="fa fa-circle-o"></i>生化实验</a></li>
+                    <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'sample')"><i class="fa fa-circle-o"></i>样本</a></li>
+                    <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'organ')"><i class="fa fa-circle-o"></i>组织器官</a></li>
+                    <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'disease')"><i class="fa fa-circle-o"></i>病症类型</a></li>
+                    <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'sequence')"><i class="fa fa-circle-o"></i>测序技术</a></li>
+                    <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'species')"><i class="fa fa-circle-o"></i>物种</a></li>
+                    <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'datafile')"><i class="fa fa-circle-o"></i>数据文件</a></li>
+                    <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'filetype')"><i class="fa fa-circle-o"></i>文件格式</a></li>
                 </ul>
             </li>
             <li class="treeview">
@@ -76,7 +76,7 @@
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-laptop"></i>
-                    <span>第三方数据分析处理平台</span>
+                    <span>第三方数据平台</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
