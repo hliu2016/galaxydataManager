@@ -15,7 +15,8 @@ module.exports = async (req, res, next) => {
             password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/)
         }))
 
-        // let result = await model.show()
+        let result = await model.show()
+        console.log(result)
 
         if (password && email) {
             req.session.user = "zhujiahao"
