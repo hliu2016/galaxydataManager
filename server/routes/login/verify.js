@@ -10,7 +10,7 @@ import * as model from '../../model/signup/signup'
 module.exports = async (req, res, next) => {
     try {
         const {email, password} = req.body
-        await Promise.promisify(Joi.validate)(Joi.object().keys({
+        let validate = await Promise.promisify(req.body, Joi.validate)(Joi.object().keys({
             email: Joi.string().email(),
             password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/)
         }))

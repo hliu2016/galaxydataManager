@@ -1,24 +1,14 @@
 import preDB from  '../../utils/dbconnector'
 
 /**
- *
+ * @param userdata
  * @returns {Promise}
  */
- export function show() {
-    return new Promise(async(resolve, reject) => {
+export function register(userdata) {
+    return new Promise(async (resolve, reject) => {
         try{
-            let data = await preDB.query('select * from user_tbl')
+            let data = await preDB.one("INSERT INTO table(${this~}) VALUES(${one}, ${two})", {userdata, table: 'dc_user'})
             resolve(data)
-        }catch (e){
-            console.log(e||e.stack)
-            reject(e)
-        }
-    })
-}
-export function c() {
-    return new Promise(async(resolve, reject) => {
-        try{
-            resolve()
         }catch (e){
             console.log(e||e.stack)
             reject(e)
