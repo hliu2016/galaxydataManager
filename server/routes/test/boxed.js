@@ -5,6 +5,10 @@
  * @param next
  * @returns {*}
  */
+
+
+import { a } from './script02'
 module.exports = (req, res, next) => {
-    return res.render('dataplatform/boxed')
+    res.send(a())
+    console.log(a())
 }
