@@ -2,15 +2,16 @@ $(function () {
     $("#signup-btn").click(function (event) {
         event.preventDefault();
         var url = '/signup',
-            username =  $("#username").val(),
-            email = $('#email').val(),
-            password = $("#password").val(),
-            data = {email: email, password: password};
+            data = {
+                username: $("#signup-username").val(),
+                email: $('#signup-email').val(),
+                password: $("#signup-password").val()
+        };
         $.post(url, data, function (data) {
             if(data) {
-                window.location.href = data.url;
+                alert(data.msg)
             }else{
-                alert(data);
+                alert(data.msg);
             }
         });
     })
@@ -18,19 +19,17 @@ $(function () {
     $("#login-btn").click(function (event) {
         event.preventDefault();
         var url = '/login',
-            email = $('#email').val(),
-            password = $("#password").val(),
-            data = {email: email, password: password};
+            data = {
+                email: $('#login-email').val(),
+                password: $("#login-password").val()
+        };
         $.post(url, data, function (data) {
             if(data) {
                 window.location.href = data.url;
             }else{
-                alert(data);
+                alert(data.msg);
             }
         });
     })
-
-
-
 })
 

@@ -7,8 +7,14 @@ import preDB from  '../../utils/dbconnector'
 export function register(userdata) {
     return new Promise(async (resolve, reject) => {
         try{
-            let data = await preDB.one("INSERT INTO table(${this~}) VALUES(${one}, ${two})", {userdata, table: 'dc_user'})
-            resolve(data)
+            await preDB.none("INSERT INTO dc_user(${this~}) VALUES(${id}, ${username}, ${email}, ${password})",
+                {
+                    id: "5",
+                    username: userdata.username,
+                    email: userdata.email,
+                    password: userdata.password
+                })
+            resolve()
         }catch (e){
             console.log(e||e.stack)
             reject(e)
