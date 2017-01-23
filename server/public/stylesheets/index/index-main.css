@@ -1,7 +1,7 @@
 body {
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: #eee;
+    background-color: #f7fafc;
 }
 
 .index-main {
@@ -78,6 +78,24 @@ text-decoration:none;
 .index-main-footer{
     text-align: center;
     padding-top: 200px;
+    padding-left: 150px;
+    padding-right: 150px;
     font-size: 10px;
     color: #b8c7ce;
+}
+
+.login-switch-button{
+    font-size: 14px;
+    background-color: transparent;
+    border: 0;
+    color: #5ca5e8;
+}
+
+.unable-login{
+    float: right;
+}
+
+.unable-login a{
+    font-size: 14px;
+    color: black;
 }
