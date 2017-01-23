@@ -1,35 +1,10 @@
 import preDB from  '../../utils/dbconnector'
 
-/**
- *
- * @returns {Promise}
- */
-export function show() {
+export function signin_validate(userdata) {
     return new Promise(async(resolve, reject) => {
         try{
-            let data = await preDB.query('select * from user_tbl')
-            resolve(data)
-        }catch (e){
-            console.log(e||e.stack)
-            reject(e)
-        }
-    })
-}
-export function c() {
-    return new Promise(async(resolve, reject) => {
-        try{
-            resolve()
-        }catch (e){
-            console.log(e||e.stack)
-            reject(e)
-        }
-    })
-}
-
-export function signin_validate() {
-    return new Promise(async(resolve, reject) => {
-        try{
-            resolve
+            let qr = await preDB.db.oneOrNone(query, values)
+            resolve(qr)
         }catch (e){
             console.log(e)
             reject(e)

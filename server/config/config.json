@@ -5,5 +5,19 @@
    "user": "witseq",
    "password": "123456",
    "database": "galaxy"
-   }
+ },
+  "email_server":{
+    "service": "gmail",
+    "auth": {
+      "user": "gmail.user@gmail.com",
+      "pass": "yourpass"
+    }
+  },
+  "mailOptions" :{
+  "from": "'Fred Foo' <foo@blurdybloop.com>",
+  "to": "bar@blurdybloop.com, baz@blurdybloop.com",
+  "subject": "Hello ✔",
+  "text": "Hello world ?",
+  "html": "<b>Hello world ?</b>"
+  }
 }

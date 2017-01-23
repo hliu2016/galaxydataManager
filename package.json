@@ -6,6 +6,7 @@
     "start": "babel-node ./server/server"
   },
   "dependencies": {
+    "@nodemailer/pro": "^1.0.0",
     "admin-lte": "^2.3.8",
     "bluebird": "^3.4.7",
     "body-parser": "~1.15.2",
