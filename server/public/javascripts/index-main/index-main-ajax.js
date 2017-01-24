@@ -7,6 +7,10 @@ $(function () {
                 email: $('#signup-email').val(),
                 password: md5($("#signup-password").val())
         };
+        if(data.username || data.email == '' || data.password == ''){
+            alert("不能为空");
+            return ;
+        }
         $.post(url, data, function (data) {
             if(data.statCode == '200') {
                 alert(data.msg)
@@ -23,6 +27,10 @@ $(function () {
                 email: $('#login-email').val(),
                 password: md5($("#login-password").val())
         };
+        if(data.email == '' || data.password == ''){
+            alert("不能为空");
+            return ;
+        }
         $.post(url, data, function (data) {
             if(data.statCode == '200') {
                 window.location.href = data.url;
