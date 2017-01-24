@@ -12,7 +12,7 @@ module.exports = async (req, res, next) => {
         await Promise.promisify(Joi.validate)(userdata, Joi.object().keys({
             username: Joi.string().min(3).max(30).required(),
             email: Joi.string().email(),
-            password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/),
+            password: Joi.string().regex(/^[a-zA-Z0-9]{3,40}$/),
         }))
         // let er = await mailer(userdata.username)
         try {

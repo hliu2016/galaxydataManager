@@ -5,7 +5,7 @@ $(function () {
             data = {
                 username: $("#signup-username").val(),
                 email: $('#signup-email').val(),
-                password: $("#signup-password").val()
+                password: md5($("#signup-password").val())
         };
         $.post(url, data, function (data) {
             if(data.statCode == '200') {
@@ -21,7 +21,7 @@ $(function () {
         var url = '/login',
             data = {
                 email: $('#login-email').val(),
-                password: $("#login-password").val()
+                password: md5($("#login-password").val())
         };
         $.post(url, data, function (data) {
             if(data.statCode == '200') {
