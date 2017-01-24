@@ -9,7 +9,7 @@ export function register(userdata) {
         try{
             await preDB.none("INSERT INTO dc_user(${this~}) VALUES(${id}, ${username}, ${email}, ${password})",
                 {
-                    id: "5",
+                    id: '2',
                     username: userdata.username,
                     email: userdata.email,
                     password: userdata.password

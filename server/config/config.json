@@ -7,10 +7,10 @@
    "database": "galaxy"
  },
   "email_server":{
-    "service": "gmail",
+    "host": "smtp.sina.com",
     "auth": {
-      "user": "gmail.user@gmail.com",
-      "pass": "yourpass"
+      "user": "yilixiaomaizi@sina.com",
+      "pass": "zhujiahao11"
     }
   },
   "mailOptions" :{

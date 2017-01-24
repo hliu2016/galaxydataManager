@@ -8,7 +8,7 @@ $(function () {
                 password: $("#signup-password").val()
         };
         $.post(url, data, function (data) {
-            if(data) {
+            if(data.statCode == '200') {
                 alert(data.msg)
             }else{
                 alert(data.msg);
@@ -24,7 +24,7 @@ $(function () {
                 password: $("#login-password").val()
         };
         $.post(url, data, function (data) {
-            if(data) {
+            if(data.statCode == '200') {
                 window.location.href = data.url;
             }else{
                 alert(data.msg);
