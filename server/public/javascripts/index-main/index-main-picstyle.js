@@ -56,7 +56,7 @@ Round.prototype.move = function(){
 var allRound = [];
 function initRound(){
     //初始化15个圆形对象,放到数组中
-    for(var i = 0 ; i<17;i++){
+    for(var i = 0 ; i<15;i++){
         var obj = new Round();
         obj.draw();
         obj.move();
