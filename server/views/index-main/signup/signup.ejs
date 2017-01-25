@@ -1,7 +1,16 @@
 <section class="index-main-tab" id="signup">
-    <input type="text" class="form-control" placeholder="姓名" id="signup-username" required autofocus>
-    <input type="email" class="form-control" placeholder="邮箱" id="signup-email" >
-    <input type="password" class="form-control" placeholder="密码(不少于6位)" id="signup-password">
+    <div class="name input-wrapper">
+        <input type="text" class="form-control" placeholder="姓名" id="signup-username" required autofocus>
+        <label class="error is-visible">请填写姓名</label>
+    </div>
+    <div class="email input-wrapper">
+        <input type="email" class="form-control" placeholder="邮箱" id="signup-email" >
+        <label class="error is-visible">请填写邮箱</label>
+    </div>
+    <div class="password input-wrapper">
+        <input type="password" class="form-control" placeholder="密码(不少于6位)" id="signup-password">
+        <label class="error is-visible">请填写密码</label>
+    </div>
     <button class="btn btn-lg btn-primary btn-block index-main-btn" type="submit" id="signup-btn">注册云舟生信</button>
     <p class="index-main-contract">点击「注册」按钮，即代表你同意<a href="#">《云舟生信协议》</a></p>
 </section>
