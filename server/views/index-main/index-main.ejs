@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- load stylesheet -->
     <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap3/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/index/index-main.css" />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/index/backgroud-pic-style.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/index-main/index-main.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/index-main/index-main-picstyle.css" />
 </head>
 <body>
-<section class="canvas" style="z-index: -1;">
-    <canvas id="myCanvas"></canvas>
+<section class="canvas">
+    <canvas id="myCanvas" style="z-index: -1; position: absolute;"></canvas>
 </section>
 <section class="container-fluid index-main">
     <form class="index-main-form" role="form" onsubmit="return false;">
@@ -39,7 +39,7 @@
 <script src="/javascripts/index-main/index-main-converter.js"></script>
 <!--index-main-ajax-->
 <script src="/javascripts/index-main/index-main-ajax.js"></script>
-<!--&lt;!&ndash;backgroud image&ndash;&gt;-->
-<script src="/javascripts/index-main/backgroud-pic-style.js"></script>
+<!---->
+<script src="/javascripts/index-main/index-main-picstyle.js"></script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 #myCanvas{
     border: 1px;
+    z-index: -1;
+    position: absolute;
 }
 .a {
     text-align: center;

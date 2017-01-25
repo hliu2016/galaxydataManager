@@ -1,3 +1,4 @@
+//获取窗口宽高
 var w = window.innerWidth;
 var h = window.innerHeight;
 
@@ -11,7 +12,7 @@ function fnRandom(min,max){
     return parseInt((max-min)*Math.random()+min+1)
 }
 function Round(){
-    this.r = fnRandom(10,15);
+    this.r = fnRandom(8,15);
     this.diam = this.r*2;
     //随机位置
     var x = fnRandom(0,canvas.width - this.r);
@@ -24,7 +25,7 @@ function Round(){
     this.speedY = fnRandom(0,4)>2?speed:-speed;
     //颜色
 
-    this.color = "#b8c7ce";
+    this.color = "#e1edf7";
 }
 Round.prototype.draw = function(){
     //绘制函数
@@ -54,14 +55,12 @@ Round.prototype.move = function(){
 //使用Round
 var allRound = [];
 function initRound(){
-    //初始化10个圆形对象,放到数组中
-    for(var i = 0 ; i<10;i++){
+    //初始化15个圆形对象,放到数组中
+    for(var i = 0 ; i<17;i++){
         var obj = new Round();
         obj.draw();
         obj.move();
         allRound.push(obj);
-
-
     }
 }
 initRound();
