@@ -16,7 +16,6 @@ module.exports = async (req, res, next) => {
         }))
 
         let qr = await model.signin_validate(userinfo)
-        console.log(userinfo.password)
         if (qr) {
             if(qr.password != userinfo.password){
                 return res.json({
@@ -24,7 +23,7 @@ module.exports = async (req, res, next) => {
                     "msg": 'error pwd'
                 })
             }
-            req.session.user = userinfo.email
+            req.session.user = qr.username
             return res.json({
                 "statCode": '200',
                 "msg": 'success',
