@@ -7,6 +7,7 @@ let router = Router()
 router.get('/', require('./index-main/index-main'))
 router.route('/login').post(require('./login/login'))
 router.route('/signup').post(require('./signup/signup'))
+router.route('/email').get(require('./emailActive/emailValidate')).post(require('./emailActive/emailActive'))
 router.route('/logout').get(require('./logout/logout'))
 router.route('/user').get(require('./dataplatform/homepage'))
 

@@ -13,7 +13,7 @@ $(function () {
         data.forEach(function (value, index) {
             if(value == '' || value == md5('')){
                 $('#signup-' + Const[index]).next().html(Zconst[index] + '不能为空').css('display', 'inline');
-                isReturn += 1
+                isReturn += 1;
             }
         })
         if(isReturn > 0){
@@ -22,9 +22,22 @@ $(function () {
         $.post(url, {username: data[0], email: data[1], password: data[2]}, function (data) {
             if(data.statCode == '200') {
                 swal({
-                    title: "恭喜!",
-                    text: "注册信息以提交!",
-                    imageUrl: "images/thumbs-up.jpg"
+                    title: "邮箱激活!",
+                    text: "<span>请点击下面激活邮箱</span>",
+                    imageUrl: "images/thumbs-up.jpg",
+                    showConfirmButton: true,
+                    html: true,
+                    confirmButtonText: '激活邮箱',
+                    cancelButtonText: '取消',
+                    showCancelButton: true
+                }, function () {
+                    $.post('/email', { email: $('#signup-email').val() },function (data) {
+                        if(data.stateCode == '200'){
+                            swal("漂亮!", "快去你的邮箱进行验证");
+                        }else{
+                            swal("很遗憾!", "你的邮箱貌似有问题");
+                        }
+                    })
                 });
             }else{
                 $('#signup-email').next().css('display', 'inline').html('该邮箱已被注册');
@@ -63,6 +76,12 @@ $(function () {
                 password.next().html('密码不正确').css('display', 'inline');
             }
         });
+    })
+
+    $('#email-activate-achor').click(function (event) {
+        event.preventDefault();
+        var url = '/email'
+        $.post(url, {email: $('#signup-email').val()})
     })
 
     $('#login-email').on('click', function () {

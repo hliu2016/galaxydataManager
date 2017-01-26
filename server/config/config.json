@@ -1,23 +1,17 @@
 {
- "db":{
-   "host": "115.159.38.41",
-   "port": "5432",
-   "user": "witseq",
-   "password": "123456",
-   "database": "galaxy"
- },
-  "email_server":{
+  "db": {
+    "host": "115.159.38.41",
+    "port": "5432",
+    "user": "witseq",
+    "password": "123456",
+    "database": "galaxy"
+  },
+  "email_server": {
     "host": "smtp.sina.com",
+    "service": "sina",
     "auth": {
       "user": "yilixiaomaizi@sina.com",
       "pass": "zhujiahao11"
     }
-  },
-  "mailOptions" :{
-  "from": "'Fred Foo' <foo@blurdybloop.com>",
-  "to": "bar@blurdybloop.com, baz@blurdybloop.com",
-  "subject": "Hello ✔",
-  "text": "Hello world ?",
-  "html": "<b>Hello world ?</b>"
   }
 }

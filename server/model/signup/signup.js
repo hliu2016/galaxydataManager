@@ -20,5 +20,20 @@ export function register(userdata) {
         }
     })
 }
+/**
+ * @returns {Promise}
+ * @constructor
+ */
+export function ActivateEmail() {
+    return new Promise(async (resolve, reject) => {
+        try{
+            await preDB.none('UPDATE dc_user set isActived = 1')
+            resolve()
+        }catch (e){
+            console.log(e||e.stack)
+            reject(e)
+        }
+    })
+}
 
 
