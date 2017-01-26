@@ -21,7 +21,11 @@ $(function () {
         }
         $.post(url, {username: data[0], email: data[1], password: data[2]}, function (data) {
             if(data.statCode == '200') {
-                alert(data.msg)
+                swal({
+                    title: "恭喜!",
+                    text: "注册信息以提交!",
+                    imageUrl: "images/thumbs-up.jpg"
+                });
             }else{
                 $('#signup-email').next().css('display', 'inline').html('该邮箱已被注册');
             }

@@ -8,6 +8,7 @@ body {
     max-width: 330px;
     padding: 15px;
     margin-top: 80px;
+    height: 100%;
 }
 .index-main-heading{
     text-align: center;
@@ -15,6 +16,7 @@ body {
     font-size: 60px;
     margin-bottom: 25px;
     color: #00acd6;
+    width: 100%;
 }
 .index-main-slogan{
     text-align: center;
@@ -101,6 +103,10 @@ text-decoration:none;
 }
 
 .error {
+    line-height: 40px;
     display: none;
     color: red;
+    position: absolute;
+    z-index: 22;
+    margin-top: -40px;
 }
