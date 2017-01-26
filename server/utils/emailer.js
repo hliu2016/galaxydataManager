@@ -17,8 +17,8 @@ let transporter = nodemailer.createTransport(conf.email_server)
                     "subject": "云舟生信邮箱验证",
                     "text": "云舟生信邮箱验证",
                     "html": "<b>亲爱的用户您好：</b></br>" +
-                    "<p>请点击下面的链接进行您的邮箱激活：</p></br>" +
-                    "<a href='127.0.0.1/email?isActived=True&actiCode=12345678'>www.witseq.com/email?isActived=True&actiCode=12345678</a>"
+                    "<p>为了不影响你的用户体验请点击下面按钮激活邮箱：</p></br>" +
+                    "<a href='http://127.0.0.1:3000/email?isActived=True&actiCode=12345678' target='_blank'>立刻激活邮箱</a>"
                })
             resolve(er)
         } catch (e){
