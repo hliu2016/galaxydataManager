@@ -7,8 +7,6 @@
  */
 
 
-import { a } from './script02'
 module.exports = (req, res, next) => {
-    res.send(a())
-    console.log(a())
+    res.render('index-main/email-confirm')
 }

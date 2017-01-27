@@ -5,12 +5,12 @@ module.exports = async (req, res, next) => {
     if(isActived && actiCode){
         try {
             await model.ActivateEmail()
-            res.send('激活成功！')
+            res.render('index-main/email-confirm')
         }catch (e){
             console.log(e||e.stack)
-            res.send('发生错误！')
+            res.render('error')
         }
     }else{
-        res.send('发生错误！')
+        res.render('error')
     }
 }
