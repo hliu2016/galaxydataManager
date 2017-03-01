@@ -1,0 +1,28 @@
+.file-upload-modal .modal-header h3{
+    font-size: 20px;
+    color: #00c0ef;
+}
+
+.file-upload-modal .modal-footer .file-upload-cancel-btn{
+    border-color: #00c0ef;
+    background: white;
+    color: #00c0ef;
+}
+.file-upload-modal .modal-footer .localfile-upload-btn{
+    border-color: #00c0ef;
+    background: white;
+    color: #00c0ef;
+}
+.file-upload-modal .modal-body .file-drag-area{
+    width: auto;
+    padding-left: 10px;
+    padding-right: 20px;
+    height: 200px;
+    border: dashed;
+    border-color: #b8c7ce;
+    text-align: center;
+}
+.file-upload-modal .modal-body .file-drag-area .warning{
+    color: #999999;
+    font-size: 30px;
+}

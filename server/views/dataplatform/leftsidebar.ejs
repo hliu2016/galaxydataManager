@@ -58,6 +58,7 @@
                     <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'species')"><i class="fa fa-circle-o"></i>物种</a></li>
                     <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'datafile')"><i class="fa fa-circle-o"></i>数据文件</a></li>
                     <li><a class="tablink" href="javascript:void(0)" onClick="getContent(event, 'filetype')"><i class="fa fa-circle-o"></i>文件格式</a></li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-circle-o"></i>添加文件类型</a></li>
                 </ul>
             </li>
             <li class="treeview">
@@ -189,9 +190,28 @@
             </li>
             <li><a href="../../../../AdminLTE/documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
             <li class="header">用户操作</li>
-            <li><a href="#" id="upload_file"><i class="fa fa-upload" aria-hidden="true"></i> <span>文件上传</span></a></li>
-            <li><a href="#" id="download_file"><i class="fa fa-download" aria-hidden="true"></i> <span>文件下载</span></a></li>
+            <li><a href="#" id="upload_file" data-toggle="modal" data-target="#file_upload_modal"><i class="fa fa-upload" aria-hidden="true"></i> <span>文件上传</span></a></li>
             <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Todo</span></a></li>
+            <section class="upload_download_modal">
+                <div class="modal fade file-upload-modal" id="file_upload_modal" tabindex="-1" role="dialog" aria-labelledby="fileuploadmodal">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>从本地磁盘上传文件</h3>
+                            </div>
+                            <div class="modal-body">
+                                <div class="file-drag-area">
+                                   <span class="warning">请将文件拖拽到此区域<span>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default localfile-upload-btn">从本地上传</button>
+                                <button type="button" class="btn btn-default file-upload-cancel-btn" data-dismiss="modal">取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </ul>
     </section>
     <!-- /.sidebar -->
