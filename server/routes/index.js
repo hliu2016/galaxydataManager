@@ -10,6 +10,8 @@ router.route('/signup').post(require('./signup/signup'))
 router.route('/email').get(require('./emailActive/emailValidate')).post(require('./emailActive/emailActive'))
 router.route('/logout').get(require('./logout/logout'))
 router.route('/user').get(require('./dataplatform/homepage'))
+router.route('/upload').post(require('./file/upload'))
+router.route('/download').post(require('./file/download'))
 
 /**
  * route working for adminLTE module
