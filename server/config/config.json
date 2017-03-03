@@ -13,5 +13,8 @@
       "user": "yilixiaomaizi@sina.com",
       "pass": "zhujiahao11"
     }
+  },
+  "glusterFs": {
+    "RootAddress": ""
   }
 }

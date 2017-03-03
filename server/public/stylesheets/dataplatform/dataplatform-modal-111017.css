@@ -1,3 +1,4 @@
+/*file-upload-modal*/
 .file-upload-modal .modal-header h3{
     font-size: 20px;
     color: #00c0ef;
@@ -25,4 +26,10 @@
 .file-upload-modal .modal-body .file-drag-area .warning{
     color: #999999;
     font-size: 30px;
+}
+/*file-upload-modal*/
+/*disease-add-type*/
+.disease-add-modal .modal-header h3{
+    font-size: 20px;
+    color: #999999;
 }

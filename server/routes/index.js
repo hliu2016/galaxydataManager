@@ -12,6 +12,7 @@ router.route('/logout').get(require('./logout/logout'))
 router.route('/user').get(require('./dataplatform/homepage'))
 router.route('/upload').post(require('./file/upload'))
 router.route('/download').post(require('./file/download'))
+router.route('/diseasetypeadd').post(require('./diseaseTypeAdd/add'))
 
 /**
  * route working for adminLTE module
