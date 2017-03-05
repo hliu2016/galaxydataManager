@@ -33,3 +33,14 @@
     font-size: 20px;
     color: #999999;
 }
+
+.disease-add-modal .modal-footer .disease-add-type-btn{
+    border-color: #00c0ef;
+    background: white;
+    color: #00c0ef;
+}
+.disease-add-modal .modal-footer .disease-type-cancel-btn{
+    border-color: #00c0ef;
+    background: white;
+    color: #00c0ef;
+}
