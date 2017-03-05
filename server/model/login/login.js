@@ -9,7 +9,7 @@ export function signin_validate(userdata) {
                 })
             resolve(qr)
         }catch (e){
-            console.log(e)
+            console.log(e||e.stack)
             reject(e)
         }
     })

@@ -6,14 +6,17 @@
             </div>
             <div class="modal-body">
                 <div class="file-drag-area">
-                    <span class="warning">请将文件拖拽到此区域</span>
+                    <span class="warning"><i class="fa fa-files-o" aria-hidden="true"></i>请将文件拖拽到此区域</span>
+                </div>
+                <div class="local-file-upload-area">
+                    <form id="file-upload-form">
+                        <p class="hidden"><input type="file" class="local-file-upload-input"/></p>
+                    </form>
                 </div>
             </div>
             <div class="modal-footer">
-                <form>
-                    <input type="file">
-                    <button type="button" class="btn btn-default localfile-upload-btn">从本地上传</button>
-                </form>
+                <button type="button" class="btn btn-default localfile-upload-btn">本地文件</button>
+                <button type="button" class="btn btn-default files-upload-btn">上传</button>
                 <button type="button" class="btn btn-default file-upload-cancel-btn" data-dismiss="modal">取消</button>
             </div>
         </div>

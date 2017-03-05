@@ -25,7 +25,15 @@
 }
 .file-upload-modal .modal-body .file-drag-area .warning{
     color: #999999;
-    font-size: 30px;
+    font-size: 15px;
+}
+.file-upload-modal .modal-body .local-file-upload-area .hidden{
+    display: none;
+}
+.file-upload-modal .modal-footer .files-upload-btn {
+    border-color: #00c0ef;
+    background: white;
+    color: #00c0ef;
 }
 /*file-upload-modal*/
 /*disease-add-type*/
