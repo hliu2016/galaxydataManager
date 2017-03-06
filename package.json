@@ -21,6 +21,7 @@
     "json-loader": "^0.5.4",
     "level-filesystem": "^1.2.0",
     "morgan": "~1.7.0",
+    "multer": "^1.3.0",
     "pg": "^6.1.2",
     "pg-promise": "^5.5.0",
     "redis": "^2.6.5",

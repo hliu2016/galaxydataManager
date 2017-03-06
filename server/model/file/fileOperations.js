@@ -1,6 +1,12 @@
 import preDB from  '../../utils/dbconnector'
 
-export function file_upload() {
+/**
+ * @param typename
+ * @param owner
+ * @param path
+ * @returns {Promise}
+ */
+export function file_upload(typename, owner, path) {
     return new Promise(async (resolve, reject) => {
         try{
             //todo

@@ -35,6 +35,17 @@
     background: white;
     color: #00c0ef;
 }
+.file-upload-modal .modal-body .files-display-area{
+    display: none;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.file-upload-modal .modal-body .files-display-area th{
+    text-align: center;
+    font-size: 12px;
+}
 /*file-upload-modal*/
 /*disease-add-type*/
 .disease-add-modal .modal-header h3{
