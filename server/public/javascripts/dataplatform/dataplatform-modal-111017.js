@@ -20,6 +20,10 @@ $(function () {
         $('.local-file-upload-input').trigger('click');
     })
     $('.files-upload-btn').on('click', function(){
-
+        $('.files-upload-form-btn').trigger('click');
+    })
+    $('#file-upload-form').on('submit', function (event) {
+        event.preventDefault();
+        $.ajax(this.action)
     })
 })

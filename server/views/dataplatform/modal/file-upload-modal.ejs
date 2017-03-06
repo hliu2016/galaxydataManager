@@ -9,8 +9,11 @@
                     <span class="warning"><i class="fa fa-files-o" aria-hidden="true"></i>请将文件拖拽到此区域</span>
                 </div>
                 <div class="local-file-upload-area">
-                    <form id="file-upload-form">
-                        <p class="hidden"><input type="file" class="local-file-upload-input"/></p>
+                    <form id="file-upload-form" enctype="multipart/form-data" action="/upload" method="post">
+                        <p class="hidden">
+                            <input type="file" name="genefile" class="local-file-upload-input"/>
+                            <input type="submit" class="files-upload-form-btn" value="submit"/>
+                        </p>
                     </form>
                 </div>
                 <table class="files-display-area">
