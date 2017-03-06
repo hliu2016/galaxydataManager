@@ -1,10 +1,8 @@
 import multer from 'multer'
-const option = {
+let option = {
     dest: '',
-    limit: {
-    //    todo
-    }
+    limit: {}
 }
-let upload = multer()
+let upload = multer(option).any()
 
 export default upload
