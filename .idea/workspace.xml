@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="717dfdf2-5f99-46b9-80fb-535ea853a122" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/javascripts/dataplatform/dataplatform-modal-111017.js" afterPath="$PROJECT_DIR$/server/public/javascripts/dataplatform/dataplatform-modal-111017.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/public/stylesheets/dataplatform/dataplatform-modal-111017.css" afterPath="$PROJECT_DIR$/server/public/stylesheets/dataplatform/dataplatform-modal-111017.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/views/dataplatform/homepage.ejs" afterPath="$PROJECT_DIR$/server/views/dataplatform/homepage.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/views/dataplatform/modal/file-upload-modal.ejs" afterPath="$PROJECT_DIR$/server/views/dataplatform/modal/file-upload-modal.ejs" />
     </list>
     <ignored path="galaxydataManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +28,8 @@
       <file leaf-file-name="homepage.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/views/dataplatform/homepage.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="114" column="52" selection-start-line="114" selection-start-column="52" selection-end-line="114" selection-end-column="68" />
+            <state relative-caret-position="-15">
+              <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -42,8 +38,8 @@
       <file leaf-file-name="file-upload-modal.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/views/dataplatform/modal/file-upload-modal.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="61" />
+            <state relative-caret-position="150">
+              <caret line="11" column="46" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -62,8 +58,8 @@
       <file leaf-file-name="dataplatform-modal-111017.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/public/javascripts/dataplatform/dataplatform-modal-111017.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="100" column="31" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
+            <state relative-caret-position="220">
+              <caret line="136" column="28" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -172,7 +168,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="79" />
+    <option name="x" value="66" />
     <option name="y" value="45" />
     <option name="width" value="1417" />
     <option name="height" value="794" />
@@ -387,12 +383,12 @@
       <workItem from="1488536206094" duration="2298000" />
       <workItem from="1488593337999" duration="3759000" />
       <workItem from="1488682258757" duration="13198000" />
-      <workItem from="1488760175100" duration="22657000" />
+      <workItem from="1488760175100" duration="25030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246379000" />
+    <option name="totallyTimeSpent" value="248752000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -404,7 +400,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="79" y="45" width="1417" height="794" extended-state="0" />
+    <frame x="66" y="45" width="1417" height="794" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.72646534" order="0" side_tool="false" content_ui="combo" />
@@ -415,7 +411,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957748" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31676137" sideWeight="0.49508598" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.107669614" sideWeight="0.47723132" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2002841" sideWeight="0.497543" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2002841" sideWeight="0.497543" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -817,24 +813,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/views/dataplatform/homepage.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="114" column="52" selection-start-line="114" selection-start-column="52" selection-end-line="114" selection-end-column="68" />
+        <state relative-caret-position="-15">
+          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/views/dataplatform/modal/file-upload-modal.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="61" />
+        <state relative-caret-position="150">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/public/javascripts/dataplatform/dataplatform-modal-111017.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="100" column="31" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
+        <state relative-caret-position="220">
+          <caret line="136" column="28" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="28" />
           <folding />
         </state>
       </provider>

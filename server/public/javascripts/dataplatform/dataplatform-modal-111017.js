@@ -30,13 +30,20 @@ $(function () {
             uploadItem = [],
             file_upload_tpl = $("#file-upload-tpl").html(),
             size,
-            percent;
+            percent,
+            progress;
+
         //this.files iterator
         for(var i = 0, j = this.files.length;i < j;i++){
             //initialize varies
             u_file = this.files[i];
-            percent = 0;
             size = u_file.size;
+            // 初始通过本地记录，判断该文件是否曾经上传过
+            percent = window.localStorage.getItem(u_file[i].name + '_p');
+            if(percent && percent != '100.0'){
+                progress = '已上传 ' + percent + '%';
+                //may be something will be added here
+            }
             //push upload item in a array called  uploadItem
             uploadItem.push(file_upload_tpl.replace(/{{fileName}}/g, u_file.name).replace(/{{fileSize}}/,
                 u_file.size).replace(/{{uploadPer}}/, '100%').replace(/{{label}}/, i).replace(/{{totalSize}}/, u_file.size))
@@ -46,7 +53,7 @@ $(function () {
         $('.file-drag-area').css('display', 'none');
 
         //test
-        alert($('input[name="genefile"]').prop('files').length);
+        // alert($('input[name="genefile"]').prop('files').length);
         //tpl inut into tbody
         $('.files-display-area-tbody').html(uploadItem.join('')).end().show();
     })
@@ -62,8 +69,12 @@ $(function () {
             totalSize = _this.attr('data-size'),
             chunks = math.cell(totalSize / eachSize),
             chunk, //this is just a variable for chunks iterator like for(....)
-            percent,
-            isPaused = 0;
+            percent;
+            // isPaused = 0;
+
+        //start the first upload
+        startupload('first');
+
         //pause uploading todo
 
         /**
@@ -98,32 +109,45 @@ $(function () {
             //设置分片的开始与结尾
             var segStart = chunk * eachSize,// start
                 segEnd = (chunk + 1) * eachSize > totalSize ? totalSize : (chunk + 1) * eachSize,   //end
+                percent = (100 * segEnd / totalSize).toFixed(1), // 已上传的百分比
                 timeout = 5000;                                                                     // timeout
-                formdata = new FormData();                                                          // formdata obj
-            formdata.append('properFile', findTheFile(fileName).slice(segStart, segEnd)); // slice the file into chunks
-            formdata.append('fileName', fileName);   //the name of the file
-            formdata.append('totalSize', totalSize); //the total size of the file
-            formdata.append('isLastChunk', isLastChunk);// send isLastChunk variable
-            formdata.append('isFirstUpload', times == "first" ? 1 : 0);
+            fd = new FormData($("file-upload-form"));                                                          // formdata obj
+            fd.append('properFile', findTheFile(fileName).slice(segStart, segEnd)); // slice the file into chunks
+            fd.append('fileName', fileName);   //the name of the file
+            fd.append('totalSize', totalSize); //the total size of the file
+            fd.append('isLastChunk', isLastChunk);// send isLastChunk variable
+            fd.append('isFirstUpload', times == "first" ? 1 : 0);//whether it is the first time to uplaod?
+            /**
+             * ajax submit
+             */
+            $.ajax({
+                type: 'post',
+                url: '/upload',
+                data: fd,
+                processData: false,
+                contentType: false,
+                timeout: timeout,
+                success: function (rs) {
+                    if(rs.stateCode == '200'){
+                        //record the percentage of file which has been uploaded
+                        window.localStorage.setItem(fileName + '_p', percent);
+
+                        //if the file was uploaded
+                        if(chunk === (chunks - 1)){
+
+                        }else{
+                            //recore the uploaded chunk into the window local storage
+                            window.localStorage.setItem(fileName + '_chunk', ++chunk);
+                            //at this point, we apply a method which is similar to Recursive
+                            startupload();
+                        }
+                    }
+                },
+                error: function () {
+                    //todo
+                }
+            })
         }
 
-        /**
-         * ajax submit
-         */
-        $.ajax({
-            type: 'post',
-            url: '/upload',
-            data: formdata,
-            processData: false,
-            contentType: false,
-            timeout: timeout,
-            success: function (rs) {
-                //todo
-            },
-            error: function () {
-                //todo
-            }
-        })
-        /** ajax submit end */
     })
 })
