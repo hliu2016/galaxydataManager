@@ -10,8 +10,8 @@
                 </div>
                 <div class="local-file-upload-area">
                     <form id="file-upload-form" enctype="multipart/form-data" action="/upload" method="post">
-                        <p class="hidden">
-                            <input type="file" name="genefile" class="local-file-upload-input"/>
+                        <p class="hidden hidden-input">
+                            <input type="file" name="genefile" class="local-file-upload-input" multiple="multiple">
                             <input type="submit" class="files-upload-form-btn" value="submit"/>
                         </p>
                     </form>
@@ -24,9 +24,10 @@
                         <th>类型</th>
                         <th>设置</th>
                         <th>状态</th>
+                        <th>操作</th>
                     </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody class="files-display-area-tbody"></tbody>
                 </table>
             </div>
             <div class="modal-footer">
