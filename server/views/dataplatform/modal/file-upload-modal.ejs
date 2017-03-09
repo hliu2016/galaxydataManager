@@ -9,10 +9,26 @@
                     <span class="warning"><i class="fa fa-files-o" aria-hidden="true"></i>请将文件拖拽到此区域</span>
                 </div>
                 <div class="local-file-upload-area">
-                    <form id="file-upload-form">
-                        <p class="hidden"><input type="file" class="local-file-upload-input"/></p>
+                    <form id="file-upload-form" enctype="multipart/form-data" action="/upload" method="post">
+                        <p class="hidden hidden-input">
+                            <input type="file" name="genefile" class="local-file-upload-input" multiple="multiple">
+                            <input type="submit" class="files-upload-form-btn" value="submit"/>
+                        </p>
                     </form>
                 </div>
+                <table class="files-display-area">
+                    <thead>
+                    <tr>
+                        <th>文件</th>
+                        <th>大小</th>
+                        <th>类型</th>
+                        <th>设置</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody class="files-display-area-tbody"></tbody>
+                </table>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default localfile-upload-btn">本地文件</button>

@@ -2,8 +2,9 @@ import * as model from '../../model/file/fileOperations'
 
 module.exports = async (req, res, next) => {
     try {
-
-
+        const { typename, owner } = req.body
+        let path = ''
+        await model.file_upload(typename, owner, path)
         //todo
         return res.json({
             'stateCode': '200',

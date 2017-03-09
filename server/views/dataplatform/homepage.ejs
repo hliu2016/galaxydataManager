@@ -81,5 +81,40 @@
 <script src="/javascripts/dataplatform/demo.js"></script>
 <script src="/javascripts/dataplatform/custom.js"></script>
 <script src="/javascripts/dataplatform/dataplatform-modal-111017.js"></script>
+<script type="text/template" id="file-upload-tpl">
+  <tr class="file-upload-row" id="upload_file_row_{{label}}">
+    <td>
+      <div class="upload-text-column"><span class="upload-file-title">{{fileName}}</span></div>
+    </td>
+    <td>
+      <div class="upload-size"><strong>{{fileSize}}</strong>KB</div>
+    </td>
+    <td>
+      <div class="upload-input-column">
+        <select>
+          <option value ="volvo">精神</option>
+          <option value ="saab">心脏</option>
+          <option value="opel">肺</option>
+          <option value="audi">其他</option>
+        </select>
+      </div>
+    </td>
+    <td>
+      <div class="file-setting-column">
+        <select>
+          <option value ="volvo">Volvo</option>
+          <option value ="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option>
+        </select></div>
+    </td>
+    <td>
+      <div class="upload-status-column">{{uploadPer}}</div>
+    </td>
+    <td style="font-size: 15px">
+      <div clas="upload-operation-column"><a class="upload_items_btn upload_file_item_btn_{{lable}}" href="javascript:void(0)" data-name="{{fileName}}" data-state="default" data-size="{{totalSize}}"><i class="fa fa-pause" aria-hidden="true"></i></a></div>
+    </td>
+  </tr>
+</script>
 </body>
 </html>

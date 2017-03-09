@@ -7,6 +7,7 @@ import cookieParser from 'cookie-parser'
 import bodyParser from 'body-parser'
 import http from 'http'
 import session from 'express-session'
+import upload from './utils/multer'
 let debug = require('debug')('galaxydatamanager:server')
 
 
@@ -47,6 +48,10 @@ app.use(session({
   }
 }))
 app.use(express.static(path.join(__dirname, 'public')))
+/**
+ * use multer middleware
+ */
+app.use(upload)
 /**
  * route partition
  */

@@ -35,6 +35,23 @@
     background: white;
     color: #00c0ef;
 }
+/*----file upload table display-----*/
+.file-upload-modal .modal-body .files-display-area{
+    display: none;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.file-upload-modal .modal-body .files-display-area thead tr th{
+    color: #999999;
+    text-align: left;
+    font-size: 15px;
+}
+.file-upload-modal .modal-body .files-display-area tbody td {
+    font-size: 10px;
+    text-align: left;
+}
 /*file-upload-modal*/
 /*disease-add-type*/
 .disease-add-modal .modal-header h3{
@@ -52,3 +69,4 @@
     background: white;
     color: #00c0ef;
 }
+
